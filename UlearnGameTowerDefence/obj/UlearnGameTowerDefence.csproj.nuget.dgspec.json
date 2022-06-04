@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\di-pl\\Desktop\\proga\\game\\UlearnGameTowerDefence\\UlearnGameTowerDefence.csproj": {}
+    "C:\\Users\\di-pl\\Desktop\\proga\\game\\git\\UlearnTD\\UlearnGameTowerDefence\\UlearnGameTowerDefence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\di-pl\\Desktop\\proga\\game\\UlearnGameTowerDefence\\UlearnGameTowerDefence.csproj": {
+    "C:\\Users\\di-pl\\Desktop\\proga\\game\\git\\UlearnTD\\UlearnGameTowerDefence\\UlearnGameTowerDefence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\di-pl\\Desktop\\proga\\game\\UlearnGameTowerDefence\\UlearnGameTowerDefence.csproj",
+        "projectUniqueName": "C:\\Users\\di-pl\\Desktop\\proga\\game\\git\\UlearnTD\\UlearnGameTowerDefence\\UlearnGameTowerDefence.csproj",
         "projectName": "UlearnGameTowerDefence",
-        "projectPath": "C:\\Users\\di-pl\\Desktop\\proga\\game\\UlearnGameTowerDefence\\UlearnGameTowerDefence.csproj",
+        "projectPath": "C:\\Users\\di-pl\\Desktop\\proga\\game\\git\\UlearnTD\\UlearnGameTowerDefence\\UlearnGameTowerDefence.csproj",
         "packagesPath": "C:\\Users\\di-pl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\di-pl\\Desktop\\proga\\game\\UlearnGameTowerDefence\\obj\\",
+        "outputPath": "C:\\Users\\di-pl\\Desktop\\proga\\game\\git\\UlearnTD\\UlearnGameTowerDefence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "Z:\\pogroms\\Visual Studio Community 2022\\ObshComponent\\NuGetPackages"
