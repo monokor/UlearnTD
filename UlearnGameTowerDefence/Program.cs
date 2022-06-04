@@ -15,8 +15,7 @@ namespace UlearnGameTowerDefence
             // see https://aka.ms/applicationconfiguration.
 
 
-
-
+            //создаем пути и слоты для башен, пока так
             var path = new LinkedList<PathNode>();
             path.AddLast(new PathNode(new Point(0, 170)));
             path.AddLast(new PathNode(new Point(120, 210)));
@@ -51,30 +50,13 @@ namespace UlearnGameTowerDefence
             slots[9] = new Point(1808, 270);
 
 
-
+            //создаем карту и уровень
             var gamemap = new Map(path, slots);
             var level = new Level();
             level.Start(gamemap);
 
-
-
-
-            //var time = 0;
-            //var timer = new System.Windows.Forms.Timer();
-            //timer.Interval = 500;
-            //timer.Tick += (sender, args) =>
-            //{
-            //    time++;
-            //};
-
-
-
-
             ApplicationConfiguration.Initialize();
-            //Thread.Sleep(10000);
-            var form = new Form1(gamemap, level);
-            //timer.Tick += (sender, args) => form.Hide();
-            Application.Run(form);
+            Application.Run(new Form1(gamemap, level));
         }
     }
 }

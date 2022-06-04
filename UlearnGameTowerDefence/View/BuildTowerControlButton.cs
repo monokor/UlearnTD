@@ -7,12 +7,12 @@ using UlearnGameTowerDefence.GameModel;
 
 namespace UlearnGameTowerDefence.View
 {
-    public class BuildTowerControlButton : Button
+    public class BuildTowerControlButton : Button //кнопка, создающая башню конкретного типа
     {
         int SlotID;
         Level thisLevel;
         TowerType type;
-        List<BuildTowerControlButton> currentBuildButtonsCollection;
+        List<BuildTowerControlButton> currentBuildButtonsCollection; //список соседних таких кнопок, чтобы удалить все при нажатии
 
         public BuildTowerControlButton(int id, Level level, TowerType type, List<BuildTowerControlButton> list)
         {
@@ -52,7 +52,7 @@ namespace UlearnGameTowerDefence.View
             {
                 thisLevel.Towers.Add(new Tower(type, thisLevel.map.TowerSlots[SlotID]));
                 thisLevel.Money -= 100;
-                foreach (var button in currentBuildButtonsCollection)
+                foreach (var button in currentBuildButtonsCollection) //удаляем все соседние кнопки
                 {
                     button.Visible = false;
                     button.Dispose();

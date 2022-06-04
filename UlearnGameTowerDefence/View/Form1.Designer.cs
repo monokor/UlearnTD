@@ -57,28 +57,33 @@ namespace UlearnGameTowerDefence
             thisLevel = level;
             SelectButtons = new List<SelectTowerControlButton>();
 
-            ///таймер
+            //таймер для тиков
             var timer = new System.Windows.Forms.Timer();
             timer.Interval = 50;
             timer.Tick += TimerTick;
             timer.Start();
 
-            var fpsTimer = new System.Windows.Forms.Timer();
-            fpsTimer.Interval = 1000;
-            fpsTimer.Tick += ResetFramesCount;
-            fpsTimer.Start();
+            ////для дебага, узнать сколько тиков в секунду
+            //var fpsTimer = new System.Windows.Forms.Timer();
+            //fpsTimer.Interval = 1000;
+            //fpsTimer.Tick += ResetFramesCount;
+            //fpsTimer.Start();
 
-            ///узнаем фактическое разрешение экрана
+
+            ///тут я буду пытаться подогнать игру под все разрешения
+            ///пока что желательно запускать все таки на 1920x1080
+
+            //узнаем фактическое разрешение экрана
             var width = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
             wCoef = width / 1920;
             var height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
             hCoef = height / 1080;
 
-            ///карта фоном с фактическим разрешением
+            //карта фоном с фактическим разрешением 
             this.BackgroundImage = new Bitmap(map.Texture, new Size((int)(map.Texture.Width * wCoef), (int)(map.Texture.Height * hCoef)));
             this.BackgroundImageLayout = ImageLayout.Stretch;
 
-            ///подстраиваем текстуры под фактическое разрешение
+            //подстраиваем текстуры под фактическое разрешение
             foreach (var enemy in level.Enemies)
             {
                 for (int i = 0; i < enemy.AnimationFrames.Count(); i++)
@@ -89,6 +94,7 @@ namespace UlearnGameTowerDefence
                 }
             }
 
+            ////текстуры для башен, надо переписать
             //for (int i = 0; i < thisLevel.Towers.Count(); i++)
             //{
             //    thisLevel.Towers[i].Texture = new Bitmap(thisLevel.Towers[i].Texture,
@@ -96,6 +102,11 @@ namespace UlearnGameTowerDefence
             //                                                   (int)(thisLevel.Towers[i].Texture.Height * hCoef * 0.5)));
             //}
 
+            ///
+            ///
+
+
+            //создаем кнопки для выбора типа башни на каждом слоте
             for (var i = 0; i < thisLevel.map.TowerSlots.Count(); i++)
             {
                 var newButton = new SelectTowerControlButton(i, thisLevel, this);
@@ -105,7 +116,7 @@ namespace UlearnGameTowerDefence
                 this.Controls.Add(newButton);
             }
 
-            ///полноэкранный режим
+            //полноэкранный режим
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 
@@ -119,7 +130,7 @@ namespace UlearnGameTowerDefence
             Invalidate();
         }
 
-        private void ResetFramesCount(object sender, EventArgs e)
+        private void ResetFramesCount(object sender, EventArgs e) //для подсчета тиков в секунду
         {
             isReadyTicks = true;
         }
@@ -134,6 +145,7 @@ namespace UlearnGameTowerDefence
             var pathPen = new Pen(Color.Red, 5);
             var slotPen = new Pen(Color.Green, 5);
 
+            ////это можно раскомментить, если хочется посмотреть на слоты и пути
             //foreach (var node in GameMap.PathNodes)
             //{
             //    graphics.DrawEllipse(pathPen, node.Position.X - 5, node.Position.Y - 5, 10, 10);
@@ -146,6 +158,7 @@ namespace UlearnGameTowerDefence
             //    graphics.DrawEllipse(slotPen, slot.X - 5, slot.Y - 5, 10, 10);
             //}
 
+            //рисуем врагов
             foreach (var enemy in thisLevel.Enemies)
             {
                 if (enemy == null)
@@ -156,8 +169,11 @@ namespace UlearnGameTowerDefence
                     new Point(enemy.Position.X - enemy.AnimationFrames[enemy.AnimationFrame].Width / 2, 
                               enemy.Position.Y - enemy.AnimationFrames[enemy.AnimationFrame].Height / 2));
 
-                test(enemy);
+                //тут был просто метод переключающий кадры анимации
+                //но таким способом тоже лагают
+                test(enemy); 
             }
+            //рисуем башни
             foreach (var tower in thisLevel.Towers)
             {
                 if (tower == null)
@@ -166,6 +182,7 @@ namespace UlearnGameTowerDefence
                 graphics.DrawImage(tower.Texture, 
                     new Point((tower.Position.X - (int)(tower.Texture.Width * wCoef * 0.5 / 4)), (tower.Position.Y - (int)(tower.Texture.Height * hCoef * 0.5 / 4))));
             }
+            //рисуем снаряды
             foreach (var projectile in thisLevel.Projectiles)
             {
                 if (projectile == null)
@@ -174,16 +191,11 @@ namespace UlearnGameTowerDefence
                 graphics.DrawImage(projectile.Texture, projectile.Position);
             }
 
-            //foreach (var button in BuildTowerButtons)
-            //{
-            //    if (button == null)
-            //        continue;
-                
-            //}
+            //выводим деньги
             var brush = new SolidBrush(Color.Black);
             graphics.DrawString(thisLevel.Money.ToString(), DefaultFont, brush, 500, 500);
 
-            if (isReadyTicks)
+            if (isReadyTicks) //выводим тики в секунду, криво
             {
                 graphics.DrawString(ticksCounter.ToString(), DefaultFont, brush, 700, 250);
                 ticksCounter = 0;
@@ -192,7 +204,7 @@ namespace UlearnGameTowerDefence
         }
 
 
-        private void test(Enemy enemy)
+        private void test(Enemy enemy) //костыль для проверки, не помог
         {
             enemy.NextAnimFrame();
         }

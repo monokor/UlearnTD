@@ -40,15 +40,15 @@ namespace UlearnGameTowerDefence.GameModel
 
         public Enemy SearchForEnemy(List<Enemy> enemiesOnMap)
         {
-            if (currentShootingCooldownTicks == 0)
+            if (currentShootingCooldownTicks == 0) //если выстрел готов
             {
-                foreach (var enemy in enemiesOnMap)
+                foreach (var enemy in enemiesOnMap) //смотрим с близжайших к финишу
                 {
-                    if (enemy.WillGetDamage < enemy.Health && DistanceBetween(Position, enemy.Position) <= Radius)
+                    if (enemy.WillGetDamage < enemy.Health && DistanceBetween(Position, enemy.Position) <= Radius) //если он не умрет от уже существующих пуль и попадает в радиус
                     {
                         //enemy.TimesToTakeDamages.Add(this.Projectile.TicksToHit, this.Projectile.Damage);
                         currentShootingCooldownTicks = ShootingCooldownTicks;
-                        return enemy;
+                        return enemy; //возвращаем левелу, он создаст снаряд
                     }
                 }
             }

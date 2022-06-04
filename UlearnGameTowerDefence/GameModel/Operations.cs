@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace UlearnGameTowerDefence.GameModel
 {
-    public static class Operations
+    public static class Operations //общие математические операции
     {
-        public static double DistanceBetween(Point first, Point second)
+        public static double DistanceBetween(Point first, Point second) 
         {
             return Math.Sqrt(Math.Pow(first.X - second.X, 2) + 
                              Math.Pow(first.Y - second.Y, 2));
@@ -26,21 +26,5 @@ namespace UlearnGameTowerDefence.GameModel
 
             return angleR;
         }
-
-        //public static void Swap(Enemy enemy, Enemy nextEnemy, LinkedList<Enemy> list)
-        //{
-        //    LinkedListNode<Enemy> currentNode = list.Find(enemy);
-        //    LinkedListNode<Enemy> nextNode = list.Find(nextEnemy);
-        //    LinkedListNode<Enemy> nextnext = null;
-        //    LinkedListNode<Enemy> prevprev = null;
-
-        //    if (nextEnemy != list.Last.Value)
-        //        nextnext = list.Find(nextEnemy).Next;
-        //    if (enemy != list.First.Value)
-        //        prevprev = list.Find(enemy).Previous;
-
-        //    list.Remove(enemy);
-        //    list.AddAfter
-        //}
     }
 }

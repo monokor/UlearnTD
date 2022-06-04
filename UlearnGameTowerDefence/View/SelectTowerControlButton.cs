@@ -7,7 +7,7 @@ using UlearnGameTowerDefence.GameModel;
 
 namespace UlearnGameTowerDefence.View
 {
-    public class SelectTowerControlButton : Button
+    public class SelectTowerControlButton : Button //кнопка при нажатии дает выбор типа башни
     {
         int SlotID;
         Level thisLevel;
@@ -34,11 +34,14 @@ namespace UlearnGameTowerDefence.View
 
         protected override void OnClick(EventArgs e)
         {
-            var list = new List<BuildTowerControlButton>();
+            var list = new List<BuildTowerControlButton>(); //список всех выпадающих кнопок
+
+            //по кнопке на каждый тип башни
             var firstButton = new BuildTowerControlButton(SlotID, thisLevel, TowerType.Cannon, list);
             firstButton.Location = new Point(Location.X - Width * 3 / 4, this.Location.Y + Height / 10);
             var secondButton = new BuildTowerControlButton(SlotID, thisLevel, TowerType.BombTower, list);
             secondButton.Location = new Point(Location.X + Width / 2, this.Location.Y + Height / 10);
+
             list.Add(firstButton);
             list.Add(secondButton);
 
