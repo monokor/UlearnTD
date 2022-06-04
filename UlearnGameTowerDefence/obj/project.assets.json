@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows10.0.17763": {}
+    "net6.0-windows10.0.19041": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0-windows10.0.17763": []
+    "net6.0-windows10.0.19041": []
   },
   "packageFolders": {
     "C:\\Users\\di-pl\\.nuget\\packages\\": {},
@@ -29,15 +29,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows10.0.17763"
+        "net6.0-windows10.0.19041"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0-windows10.0.17763": {
-          "targetAlias": "net6.0-windows10.0.17763.0",
+        "net6.0-windows10.0.19041": {
+          "targetAlias": "net6.0-windows10.0.19041.0",
           "projectReferences": {}
         }
       },
@@ -48,8 +48,8 @@
       }
     },
     "frameworks": {
-      "net6.0-windows10.0.17763": {
-        "targetAlias": "net6.0-windows10.0.17763.0",
+      "net6.0-windows10.0.19041": {
+        "targetAlias": "net6.0-windows10.0.19041.0",
         "imports": [
           "net461",
           "net462",
@@ -63,7 +63,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
-            "version": "[10.0.17763.23, 10.0.17763.23]"
+            "version": "[10.0.19041.23, 10.0.19041.23]"
           }
         ],
         "frameworkReferences": {

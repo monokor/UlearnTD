@@ -44,9 +44,9 @@ namespace UlearnGameTowerDefence.GameModel
                     Speed = 4;
                     AnimationFrames = new Bitmap[3]
                     {
-                        new Bitmap(@"C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\Resources\Enemies\Simple\1.png"),
-                        new Bitmap(@"C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\Resources\Enemies\Simple\2.png"),
-                        new Bitmap(@"C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\Resources\Enemies\Simple\3.png"),
+                        new Bitmap(Application.StartupPath + @"..\..\..\Resources\Enemies\Simple\1.png"),
+                        new Bitmap(Application.StartupPath + @"..\..\..\Resources\Enemies\Simple\2.png"),
+                        new Bitmap(Application.StartupPath + @"..\..\..\Resources\Enemies\Simple\3.png"),
                     };
                     break;
 
@@ -55,7 +55,7 @@ namespace UlearnGameTowerDefence.GameModel
                     Speed = 8;
                     AnimationFrames = new Bitmap[1]
                     {
-                        new Bitmap(@"C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\Resources\Enemies\Little\1.png"),
+                        new Bitmap(Application.StartupPath + @"..\..\..\Resources\Enemies\Little\1.png"),
                     };
                     break;
 

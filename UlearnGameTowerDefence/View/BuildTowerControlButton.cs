@@ -26,12 +26,12 @@ namespace UlearnGameTowerDefence.View
             switch (type)
             {
                 case TowerType.Cannon:
-                    texture = new Bitmap(@"C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\Resources\Towers\Cannon\Building.png");
+                    texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Towers\Cannon\Building.png");
                     Image = new Bitmap(texture, new Size(40, 40));
                     break;
 
                 case TowerType.BombTower:
-                    texture = new Bitmap(@"C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\Resources\Towers\Magic\Building.png");
+                    texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Towers\Magic\Building.png");
                     Image = new Bitmap(texture, new Size(40, 40));
                     break;
             }

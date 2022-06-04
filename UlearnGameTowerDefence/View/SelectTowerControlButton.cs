@@ -20,7 +20,7 @@ namespace UlearnGameTowerDefence.View
             Size = new Size(60, 60);
             currentForm = form;
 
-            Image = new Bitmap(@"C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\Resources\GUI\TowerSlotButton.png");
+            Image = new Bitmap(Application.StartupPath + @"..\..\..\Resources\GUI\TowerSlotButton.png");
 
             BackColor = Color.Transparent;
             FlatAppearance.BorderColor = Color.White;
