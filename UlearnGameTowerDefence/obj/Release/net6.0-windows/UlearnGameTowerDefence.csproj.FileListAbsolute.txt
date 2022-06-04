@@ -1,0 +1,17 @@
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\bin\Release\net6.0-windows\UlearnGameTowerDefence.exe
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\bin\Release\net6.0-windows\UlearnGameTowerDefence.deps.json
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\bin\Release\net6.0-windows\UlearnGameTowerDefence.runtimeconfig.json
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\bin\Release\net6.0-windows\UlearnGameTowerDefence.dll
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\bin\Release\net6.0-windows\UlearnGameTowerDefence.pdb
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\obj\Release\net6.0-windows\UlearnGameTowerDefence.csproj.AssemblyReference.cache
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\obj\Release\net6.0-windows\UlearnGameTowerDefence.Form1.resources
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\obj\Release\net6.0-windows\UlearnGameTowerDefence.csproj.GenerateResource.cache
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\obj\Release\net6.0-windows\UlearnGameTowerDefence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\obj\Release\net6.0-windows\UlearnGameTowerDefence.AssemblyInfoInputs.cache
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\obj\Release\net6.0-windows\UlearnGameTowerDefence.AssemblyInfo.cs
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\obj\Release\net6.0-windows\UlearnGameTowerDefence.csproj.CoreCompileInputs.cache
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\obj\Release\net6.0-windows\UlearnGameTowerDefence.dll
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\obj\Release\net6.0-windows\refint\UlearnGameTowerDefence.dll
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\obj\Release\net6.0-windows\UlearnGameTowerDefence.pdb
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\obj\Release\net6.0-windows\UlearnGameTowerDefence.genruntimeconfig.cache
+C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\obj\Release\net6.0-windows\ref\UlearnGameTowerDefence.dll
