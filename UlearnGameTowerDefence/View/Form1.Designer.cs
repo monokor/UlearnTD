@@ -74,25 +74,27 @@ namespace UlearnGameTowerDefence
             ///пока что желательно запускать все таки на 1920x1080
 
             //узнаем фактическое разрешение экрана
-            var width = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
-            wCoef = width / 1920;
-            var height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
-            hCoef = height / 1080;
+            //var width = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width;
+            //wCoef = width / 1920;
+            //var height = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height;
+            //hCoef = height / 1080;
 
             //карта фоном с фактическим разрешением 
-            this.BackgroundImage = new Bitmap(map.Texture, new Size((int)(map.Texture.Width * wCoef), (int)(map.Texture.Height * hCoef)));
+            //this.BackgroundImage = new Bitmap(map.Texture, new Size((int)(map.Texture.Width * wCoef), (int)(map.Texture.Height * hCoef)));
+            //this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.BackgroundImage = new Bitmap(map.Texture);
             this.BackgroundImageLayout = ImageLayout.Stretch;
 
             //подстраиваем текстуры под фактическое разрешение
-            foreach (var enemy in level.Enemies)
-            {
-                for (int i = 0; i < enemy.AnimationFrames.Count(); i++)
-                {
-                    enemy.AnimationFrames[i] = new Bitmap(enemy.AnimationFrames[i],
-                                                          new Size((int)(enemy.AnimationFrames[i].Width * wCoef),
-                                                                   (int)(enemy.AnimationFrames[i].Height * hCoef)));
-                }
-            }
+            //foreach (var enemy in level.Enemies)
+            //{
+            //    for (int i = 0; i < enemy.AnimationFrames.Count(); i++)
+            //    {
+            //        enemy.AnimationFrames[i] = new Bitmap(enemy.AnimationFrames[i],
+            //                                              new Size((int)(enemy.AnimationFrames[i].Width * wCoef),
+            //                                                       (int)(enemy.AnimationFrames[i].Height * hCoef)));
+            //    }
+            //}
 
             ////текстуры для башен, надо переписать
             //for (int i = 0; i < thisLevel.Towers.Count(); i++)
@@ -145,7 +147,7 @@ namespace UlearnGameTowerDefence
             var pathPen = new Pen(Color.Red, 5);
             var slotPen = new Pen(Color.Green, 5);
 
-            ////это можно раскомментить, если хочется посмотреть на слоты и пути
+            //это можно раскомментить, если хочется посмотреть на слоты и пути
             //foreach (var node in GameMap.PathNodes)
             //{
             //    graphics.DrawEllipse(pathPen, node.Position.X - 5, node.Position.Y - 5, 10, 10);
@@ -159,7 +161,9 @@ namespace UlearnGameTowerDefence
             //}
 
             //рисуем врагов
-            foreach (var enemy in thisLevel.Enemies)
+            var er = thisLevel.Enemies;
+            er.Reverse();
+            foreach (var enemy in er)
             {
                 if (enemy == null)
                     continue;
@@ -179,8 +183,11 @@ namespace UlearnGameTowerDefence
                 if (tower == null)
                     continue;
 
-                graphics.DrawImage(tower.Texture, 
-                    new Point((tower.Position.X - (int)(tower.Texture.Width * wCoef * 0.5 / 4)), (tower.Position.Y - (int)(tower.Texture.Height * hCoef * 0.5 / 4))));
+                //graphics.DrawImage(tower.Texture, 
+                //    new Point((tower.Position.X - (int)(tower.Texture.Width * wCoef * 0.5 / 4)), (tower.Position.Y - (int)(tower.Texture.Height * hCoef * 0.5 / 4))));
+
+                graphics.DrawImage(tower.Texture,
+                    new Point(tower.Position.X - tower.Texture.Width / 2, tower.Position.Y - tower.Texture.Height * 3 / 4));
             }
             //рисуем снаряды
             foreach (var projectile in thisLevel.Projectiles)

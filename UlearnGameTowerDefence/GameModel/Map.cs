@@ -11,7 +11,7 @@ namespace UlearnGameTowerDefence.GameModel
         public LinkedList<PathNode> PathNodes { get; }
         public Point[] TowerSlots { get; }
 
-        public Bitmap Texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Maps\testmapfull.png");
+        public Bitmap Texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Maps\1.png");
 
         public Map(LinkedList<PathNode> path, Point[] slots)
         {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "acgZCJM1Uiz0g7PpSYz+j2JMZJIziMd/sQbUR2lCyZnab+2v/YorsTqYbdwxVrpoIKUKBO+CSLu5p4af9mmCbw==",
+  "dgSpecHash": "ShHj/8naI7Wn83AJ4GKXnwdaGLFEjh4yQgou/7OSM3atX32YZLglCjE2GlGsU3QjhLNLFmvMZtZKW3t/JlFv+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\di-pl\\Desktop\\proga\\game\\git\\UlearnTD\\UlearnGameTowerDefence\\UlearnGameTowerDefence.csproj",
+  "projectFilePath": "C:\\Users\\di-pl\\Desktop\\proga\\game\\UlearnGameTowerDefence\\UlearnGameTowerDefence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\di-pl\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.23\\microsoft.windows.sdk.net.ref.10.0.19041.23.nupkg.sha512"
   ],

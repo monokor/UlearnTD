@@ -32,10 +32,10 @@ namespace UlearnGameTowerDefence.GameModel
                     Texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Towers\Cannon\Projectile.png");
                     break;
 
-                case TowerType.BombTower:
+                case TowerType.Crossbow:
                     Damage = 20;
                     TicksToHit = 20;
-                    Texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Towers\Magic\Projectile.png");
+                    Texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Towers\Crossbow\Projectile.png");
                     break;
 
                 case TowerType.AirStrike:
@@ -59,13 +59,13 @@ namespace UlearnGameTowerDefence.GameModel
                 case TowerType.Cannon:
                     Damage = 10;
                     TicksToHit = 15;
-                    Texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Towers\Cannon\Projectile.png");
+                    Texture = new Bitmap(@"C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\Resources\Towers\Cannon\Projectile.png");
                     break;
 
-                case TowerType.BombTower:
+                case TowerType.Crossbow:
                     Damage = 20;
                     TicksToHit = 20;
-                    Texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Towers\Magic\Projectile.png");
+                    Texture = new Bitmap(@"C:\Users\di-pl\Desktop\proga\game\UlearnGameTowerDefence\Resources\Towers\Crossbow\Projectile.png");
                     break;
 
                 case TowerType.AirStrike:

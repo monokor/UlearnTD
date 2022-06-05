@@ -31,8 +31,8 @@ namespace UlearnGameTowerDefence.GameModel
                     ShootingCooldownTicks = 10;
                     break;
 
-                case TowerType.BombTower:
-                    Texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Towers\Magic\Building.png");
+                case TowerType.Crossbow:
+                    Texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Towers\Crossbow\Building.png");
                     ShootingCooldownTicks = 15;
                     break;
             }

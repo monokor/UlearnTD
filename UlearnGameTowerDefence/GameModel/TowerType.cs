@@ -9,7 +9,7 @@ namespace UlearnGameTowerDefence.GameModel
     public enum TowerType
     {
         Cannon,
-        BombTower,
+        Crossbow,
         AirStrike
     }
 }

@@ -27,14 +27,13 @@ namespace UlearnGameTowerDefence.View
             {
                 case TowerType.Cannon:
                     texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Towers\Cannon\Building.png");
-                    Image = new Bitmap(texture, new Size(40, 40));
                     break;
 
-                case TowerType.BombTower:
-                    texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Towers\Magic\Building.png");
-                    Image = new Bitmap(texture, new Size(40, 40));
+                case TowerType.Crossbow:
+                    texture = new Bitmap(Application.StartupPath + @"..\..\..\Resources\Towers\Crossbow\Building.png");
                     break;
             }
+            Image = new Bitmap(texture, new Size(40, 40));
 
             BackColor = Color.Transparent;
             FlatAppearance.BorderColor = Color.White;
